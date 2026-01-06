@@ -1,4 +1,4 @@
-/* X68000 Custom IPL - Hello, World! (Final perfected version) */
+/* X68000 Custom IPL - Loader version */
 
 	.section .text
 	.global _start
