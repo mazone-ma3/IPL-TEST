@@ -15,7 +15,7 @@ _c_start_:
     mov ax, cs
     mov ds, ax
     mov es, ax
-    mov ss, ax
+;    mov ss, ax
     ; SPはIPLの設定を引き継ぐか、ここで再設定
     
     ; 2. BSS(未初期化領域)のクリア (必要なら)

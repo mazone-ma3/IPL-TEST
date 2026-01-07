@@ -26,7 +26,7 @@ _TEXT   SEGMENT BYTE PUBLIC 'CODE'
 	DD	  0				; 大きいディスク用総セクタ数
 
 entry:  
-		CLI					 ; 割り込み禁止
+	CLI					 ; 割り込み禁止
 
 ;	mov ah, 17h	; buzzer
 ;	int 18h
@@ -62,14 +62,16 @@ entry:
 ;	jmp $
 
 
-	XOR	 AX, AX
-	MOV	 SS, AX		  ; スタックセグメントを0に
-	MOV	 SP, 7C00h	   ; スタックポインタをブート位置に（安全のため）
+;	XOR	 AX, AX
+;	MOV	 SS, AX		  ; スタックセグメントを0に
+;	MOV	 SP, 7C00h	   ; スタックポインタをブート位置に（安全のため）
 	STI					 ; 割り込み許可
 
 	; データセグメントはブートセグメントと同じ（ORG 0なのでDS=07C0h相当）
 	MOV	 AX, CS
 	MOV	 DS, AX
+
+	mov	bx,1024*20	;20KBytes
 
 	mov	ax,0000h
 	mov	es,ax ;0000h
