@@ -3,6 +3,8 @@ IPL起動実験 読み物 By m@3
 
 タイトルの通り、自作IPLでディスク(またはROM)起動する実験です。
 
+実践してみた完全版のソースはPRJ_DS1の方にあります。
+
 This software includes code generated with the assistance of [Gemini & Grok], an AI developed by [Google & xAI].
 
 要dd
@@ -18,6 +20,7 @@ z88dkで生成してください。
 ・PC-98版
 
 OpenWatcomで生成してください。
+
 
 
 
